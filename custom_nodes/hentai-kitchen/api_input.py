@@ -17,7 +17,7 @@ class HentaiKitchenAPIInput:
             "required": {
                 "prompt": ("STRING", {
                     "default": "",
-                    "multiline": False
+                    "multiline": True
                 }),
                 "pose": ("STRING", {
                     "default": "",
