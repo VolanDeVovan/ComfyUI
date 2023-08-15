@@ -5,8 +5,9 @@ input/
 !input/example.png
 models/
 temp/
-custom_nodes/
-!custom_nodes/example_node.py.example
+custom_nodes/*
+!custom_nodes/hentai-kitchen
+!example_node.py.example
 extra_model_paths.yaml
 /.vs
 .idea/
