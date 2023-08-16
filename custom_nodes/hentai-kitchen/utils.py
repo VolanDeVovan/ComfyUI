@@ -21,4 +21,7 @@ class HentaiKitchenRandomSeed:
         if seed is None or seed == -1:
             seed = random.randint(0, 0xffffffffffffffff)
         return (seed,)
-    
+
+    @classmethod
+    def IS_CHANGED(cls, seed):
+        return seed if seed != -1 else float("NaN")
