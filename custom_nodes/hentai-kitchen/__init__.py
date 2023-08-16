@@ -1,4 +1,5 @@
 from .api_input import HentaiKitchenAPIInput, HentaiKitchenAPIInputState
+from .utils import HentaiKitchenRandomSeed
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
