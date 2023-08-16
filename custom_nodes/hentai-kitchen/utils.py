@@ -22,24 +22,3 @@ class HentaiKitchenRandomSeed:
             seed = random.randint(0, 0xffffffffffffffff)
         return (seed,)
     
-
-class HentaiKitchenIsPresent:
-    def __init__(self):
-            pass
-    
-    @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "value": ("*"),
-            }
-        }
-
-    FUNCTION = "execute"
-    RETURN_TYPES = ("*", "BOOLEAN")
-
-
-    CATEGORY = "Hentai Kitchen"
-
-    def execute(self, value):
-        return (value, True if value is not None else False)
