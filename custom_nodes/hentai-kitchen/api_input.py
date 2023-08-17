@@ -23,20 +23,24 @@ class HentaiKitchenAPIInput:
                     "default": "",
                     "multiline": False
                 }),
-                "lora": ("STRING", {
+                "lora_character": ("STRING", {
+                    "default": "",
+                    "multiline": False
+                }),
+                "lora_pose": ("STRING", {
                     "default": "",
                     "multiline": False
                 }),
             }
         }
     
-    RETURN_TYPES = ("*", "*", "*")
-    RETURN_NAMES = ("prompt", "pose", "lora")
+    RETURN_TYPES = ("*", "*", "*", "*")
+    RETURN_NAMES = ("prompt", "pose", "lora_character", "lora_pose")
 
     FUNCTION = "input"
 
-    def input(self, prompt, pose, lora):
-        return (prompt, pose, lora)
+    def input(self, prompt, pose, lora_character, lora_pose):
+        return (prompt, pose, lora_character, lora_pose)
     
 
 class HentaiKitchenAPIInputState:
@@ -53,14 +57,17 @@ class HentaiKitchenAPIInputState:
                 "pose": ("BOOLEAN", {
                     "default": False
                 }),
-                "lora": ("BOOLEAN", {
+                "lora_character": ("BOOLEAN", {
+                    "default": False,
+                }),
+                "lora_pose": ("BOOLEAN", {
                     "default": False,
                 }),
             }
         }
     
-    RETURN_TYPES = ("BOOLEAN", "BOOLEAN")
-    RETURN_NAMES = ("pose_enabled", "lora_enabled")
+    RETURN_TYPES = ("BOOLEAN", "BOOLEAN", "BOOLEAN")
+    RETURN_NAMES = ("pose_enabled", "lora_character_enabled", "lora_pose_enabled")
 
     FUNCTION = "input"
 
