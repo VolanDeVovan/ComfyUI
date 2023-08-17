@@ -71,5 +71,5 @@ class HentaiKitchenAPIInputState:
 
     FUNCTION = "input"
 
-    def input(self, lora_character, lora_pose):
-        return (lora_character, lora_pose)
+    def input(self, pose, lora_character, lora_pose):
+        return (pose, lora_character, lora_pose)
