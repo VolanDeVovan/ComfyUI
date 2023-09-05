@@ -67,7 +67,31 @@ class HentaiKitchenTxt2ImgInputState:
     def input(self, pose, lora_character, lora_pose):
         return (pose, lora_character, lora_pose)
 
+class HentaiKitchenImg2ImgInput:
+    CATEGORY = "Hentai Kitchen"
 
+    def __init__(self):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "input_image": ("STRING", {
+                    "default": "",
+                    "multiline": False
+                }),
+                "neural_impact": ("FLOAT", {"default": 0.2, "min": 0.0, "max": 1.0}),
+            }
+        }
+
+    RETURN_TYPES = ("*", "FLOAT", )
+    RETURN_NAMES = ("input_image", "neural_impact",)
+
+    FUNCTION = "input"
+
+    def input(self, input_image, neural_impact):
+        return (input_image, neural_impact)
 
 class HentaiKitchenUpscaleInput:
     CATEGORY = "Hentai Kitchen"
