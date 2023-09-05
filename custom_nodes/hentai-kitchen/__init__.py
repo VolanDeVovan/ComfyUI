@@ -1,5 +1,5 @@
 from .utils import HentaiKitchenRandomSeed, HentaiKitchenScaleBy
-from .inputs import HentaiKitchenTxt2ImgInput, HentaiKitchenTxt2ImgInputState
+from .inputs import HentaiKitchenTxt2ImgInput, HentaiKitchenTxt2ImgInputState, HentaiKitchenUpscaleInput
 from .aspect_ratio import HentaiKitchenAspectRatio
 from .enhanced import HentaiKitchenPostProcess
 
@@ -17,6 +17,8 @@ NODE_CLASS_MAPPINGS = {
     "HentaiKitchenTxt2ImgInput": HentaiKitchenTxt2ImgInput,
     "HentaiKitchenTxt2ImgInputState": HentaiKitchenTxt2ImgInputState,
 
+    "HentaiKitchenUpscaleInput": HentaiKitchenUpscaleInput
+
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -31,4 +33,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     # Inputs
     "HentaiKitchenTxt2ImgInput": "txt2img Input (Hentai Kitchen)",
     "HentaiKitchenTxt2ImgInputState": "txt2img Input State (Hentai Kitchen)",
+
+    "HentaiKitchenUpscaleInput": "Upscale Input (Hentai Kitchen)"
 }

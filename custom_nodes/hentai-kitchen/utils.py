@@ -70,3 +70,5 @@ class HentaiKitchenScaleBy:
             np.array(resized_img)).unsqueeze(0).float() / 255.0
 
         return (tensor_img,)
+
+
